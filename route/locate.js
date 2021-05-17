@@ -60,9 +60,11 @@ ser.post('/action', (req, res) =>{
         req.body.button_7
     ]
     // console.log(button_selection)
+    let button_is_selected = false
     for(button of button_selection){
         // console.log("button = " + button)
         if(typeof button != 'undefined'){
+            button_is_selected = true
             let data = ["1"]
             let button_number
             for(button_data of button_state){
@@ -85,7 +87,7 @@ ser.post('/action', (req, res) =>{
                     // console.log("Body: ", response_axios.data)
                     // console.log("button = " + button)
                     res.render("home", {
-                        button_ans : "Button " + button_number + " is selected! with value =" + data[0] + "and made a PUT request"
+                        button_ans : "Button " + button_number + " is selected! with value = " + data[0] + " and made a PUT request"
                     })
                 }).catch((err) => {
                     console.error(err)
@@ -95,7 +97,23 @@ ser.post('/action', (req, res) =>{
                 })
         }
     }
- 
+    if(button_is_selected == false){
+        let data = ["1"]
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/V1', data)
+            .then((response_axios) => {
+                // console.log(`Status: ${response_axios.status}`)
+                // console.log("Body: ", response_axios.data)
+                // console.log("button = " + button)
+                res.render("home",{
+                    button_ans : "V1 is pressed"
+                })
+            }).catch((err) => {
+                console.error(err)
+                res.render("home", {
+                    button_ans : "Something Went Wrong!! Try Again"
+                })
+            })
+    }
 
     // for(button of button_selection){
     //     if(typeof button != 'undefined'){
