@@ -35,12 +35,22 @@ const button_state = [
 
 const login_data = [
     {
-        "user_id" : "nalayak_sachin@gmail.com",
-        "password" : "NalayakNahiKhalnayakHunM"
+        "user_id" : "Sachinbeetu",
+        "password" : "Sachin117"
     },
     {
-        "user_id" : "gaurav@gmail.com",
-        "password" : "KnownToAll"
+        "user_id" : "Narendra",
+        "password" : "Narendra081"
+    }
+    ,
+    {
+        "user_id" : "Navodit",
+        "password" : "Navodit082"
+    }
+    ,
+    {
+        "user_id" : "Nidhi",
+        "password" : "Nidhi084"
     }
 ]
 
