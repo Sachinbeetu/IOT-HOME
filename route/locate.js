@@ -51,13 +51,13 @@ ser.get("/", (req, res) =>{
 
 ser.post('/action', (req, res) =>{
     let button_selection = [
+        req.body.button_0,
         req.body.button_1,
         req.body.button_2,
         req.body.button_3,
-        req.body.button_4,
         req.body.button_5,
         req.body.button_6,
-        req.body.button_7
+        req.body.button_4
     ]
     // console.log(button_selection)
     let button_is_selected = false
