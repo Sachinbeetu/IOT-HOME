@@ -50,62 +50,28 @@ ser.get("/", (req, res) =>{
 })
 
 ser.post('/action', (req, res) =>{
-    let button_selection = [
-        req.body.button_0,
-        req.body.button_1,
-        req.body.button_2,
-        req.body.button_3,
-        req.body.button_5,
-        req.body.button_6,
-        req.body.button_4
-    ]
-    // console.log(button_selection)
-    let button_is_selected = false
-    for(button of button_selection){
-        // console.log("button = " + button)
-        if(typeof button != 'undefined'){
-            button_is_selected = true
-            let data = ["1"]
-            let button_number
-            for(button_data of button_state){
-                if(button_data.button_id === button){
-                    button_number = button
-                    if(button_data.value === "0"){
-                        data = ["1"]
-                        button_data.value = "1"
-                        // console.log("data for " + button + " is " + data)
-                    }else{
-                        data = ["0"]
-                        button_data.value = "0"
-                        // console.log("data for " + button + " is " + data)
-                    }
-                }
-            }
-            axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/V1', data)
-                .then((response_axios) => {
-                    // console.log(`Status: ${response_axios.status}`)
-                    // console.log("Body: ", response_axios.data)
-                    // console.log("button = " + button)
-                    res.render("home", {
-                        button_ans : "Button " + button_number + " is selected! with value = " + data[0] + " and made a PUT request"
-                    })
-                }).catch((err) => {
-                    console.error(err)
-                    res.render("home", {
-                        button_ans : "Something Went Wrong!! Try Again"
-                    })
-                })
-        }
-    }
-    if(button_is_selected == false){
-        let data = ["1"]
-        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/V1', data)
+    let button_0 = req.body.button_0
+    let button_1 = req.body.button_1
+    let button_2 = req.body.button_2
+    let button_3 = req.body.button_3
+    let button_4 = req.body.button_4
+    let button_5 = req.body.button_5
+    let button_6 = req.body.button_6
+
+    // console.log("button_0 : " + button_0)
+    // console.log("button_1 : " + button_1)
+    // console.log("button_2 : " + button_2)
+    // console.log("button_3 : " + button_3)
+    // console.log("button_4 : " + button_4)
+    // console.log("button_5 : " + button_5)
+    if(typeof button_0 != 'undefined'){
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D1', ["1"])
             .then((response_axios) => {
                 // console.log(`Status: ${response_axios.status}`)
                 // console.log("Body: ", response_axios.data)
                 // console.log("button = " + button)
-                res.render("home",{
-                    button_ans : "V1 is pressed"
+                res.render("home", {
+                    button_ans : "Button " + button_0 + " is selected! with value = " + 1 + " and made a PUT request"
                 })
             }).catch((err) => {
                 console.error(err)
@@ -114,6 +80,136 @@ ser.post('/action', (req, res) =>{
                 })
             })
     }
+    if(typeof button_1 != 'undefined'){
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D1', ["1"])
+            .then((response_axios) => {
+                // console.log(`Status: ${response_axios.status}`)
+                // console.log("Body: ", response_axios.data)
+                // console.log("button = " + button)
+                res.render("home", {
+                   button_ans : "Button " + button_1 + " is selected! with value = " + 1 + " and made a PUT request"
+                })
+            }).catch((err) => {
+                console.error(err)
+                res.render("home", {
+                    button_ans : "Something Went Wrong!! Try Again"
+                })
+            })
+    }
+    if(typeof button_2 != 'undefined'){
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D2', ["1"])
+            .then((response_axios) => {
+                // console.log(`Status: ${response_axios.status}`)
+                // console.log("Body: ", response_axios.data)
+                // console.log("button = " + button)
+                res.render("home", {
+                    button_ans : "Button " + button_2 + " is selected! with value = " + 1 + " and made a PUT request"
+                })
+            }).catch((err) => {
+                console.error(err)
+                res.render("home", {
+                    button_ans : "Something Went Wrong!! Try Again"
+                })
+            })
+    }
+    if(typeof button_3 != 'undefined'){
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D3', ["1"])
+            .then((response_axios) => {
+                // console.log(`Status: ${response_axios.status}`)
+                // console.log("Body: ", response_axios.data)
+                // console.log("button = " + button)
+                res.render("home", {
+                    button_ans : "Button " + button_3 + " is selected! with value = " + 1 + " and made a PUT request"
+                })
+            }).catch((err) => {
+                console.error(err)
+                res.render("home", {
+                    button_ans : "Something Went Wrong!! Try Again"
+                })
+            })
+    }
+    if(typeof button_4 != 'undefined'){
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D4', ["1"])
+            .then((response_axios) => {
+                // console.log(`Status: ${response_axios.status}`)
+                // console.log("Body: ", response_axios.data)
+                // console.log("button = " + button)
+                res.render("home", {
+                    button_ans : "Button " + button_4 + " is selected! with value = " + 1 + " and made a PUT request"
+                })
+            }).catch((err) => {
+                console.error(err)
+                res.render("home", {
+                    button_ans : "Something Went Wrong!! Try Again"
+                })
+            })
+    }
+    if(typeof button_5 != 'undefined'){
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D5', ["1"])
+            .then((response_axios) => {
+                // console.log(`Status: ${response_axios.status}`)
+                // console.log("Body: ", response_axios.data)
+                // console.log("button = " + button)
+                res.render("home", {
+                    button_ans : "Button " + button_5 + " is selected! with value = " + 1 + " and made a PUT request"
+                })
+            }).catch((err) => {
+                console.error(err)
+                res.render("home", {
+                    button_ans : "Something Went Wrong!! Try Again"
+                })
+            })
+    }
+    if(typeof button_6 != 'undefined'){
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D6', ["1"])
+            .then((response_axios) => {
+                // console.log(`Status: ${response_axios.status}`)
+                // console.log("Body: ", response_axios.data)
+                // console.log("button = " + button)
+                res.render("home", {
+                   button_ans : "Smart Button is selected! with value always 1 and made a PUT request"
+                })
+            }).catch((err) => {
+                console.error(err)
+                res.render("home", {
+                    button_ans : "Something Went Wrong!! Try Again"
+                })
+            })
+    }
+
+            // axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/V1', data)
+            //     .then((response_axios) => {
+            //         // console.log(`Status: ${response_axios.status}`)
+            //         // console.log("Body: ", response_axios.data)
+            //         // console.log("button = " + button)
+            //         res.render("home", {
+            //             button_ans : "Button " + button_number + " is selected! with value = " + data[0] + " and made a PUT request"
+            //         })
+            //     }).catch((err) => {
+            //         console.error(err)
+            //         res.render("home", {
+            //             button_ans : "Something Went Wrong!! Try Again"
+            //         })
+            //     })
+  
+
+    // if(button_is_selected == false){
+    //     let data = ["1"]
+    //     axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/V1', data)
+    //         .then((response_axios) => {
+    //             // console.log(`Status: ${response_axios.status}`)
+    //             // console.log("Body: ", response_axios.data)
+    //             // console.log("button = " + button)
+    //             res.render("home",{
+    //                 button_ans : "V1 is pressed"
+    //             })
+    //         }).catch((err) => {
+    //             console.error(err)
+    //             res.render("home", {
+    //                 button_ans : "Something Went Wrong!! Try Again"
+    //             })
+    //         })
+
 
     // for(button of button_selection){
     //     if(typeof button != 'undefined'){
