@@ -89,7 +89,7 @@ ser.post('/action', (req, res) =>{
             }
         }
         // console.log(data_0)
-        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D0', data_0)
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D16', data_0)
             .then((response_axios) => {
                 // console.log(`Status: ${response_axios.status}`)
                 // console.log("Body: ", response_axios.data)
@@ -127,7 +127,7 @@ ser.post('/action', (req, res) =>{
             }
         }
         // console.log(data_1)
-        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D1', data_1)
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D5', data_1)
             .then((response_axios) => {
                 // console.log(`Status: ${response_axios.status}`)
                 // console.log("Body: ", response_axios.data)
@@ -165,7 +165,7 @@ ser.post('/action', (req, res) =>{
             }
         }
         // console.log(data_2)
-        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D2', data_2)
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D4', data_2)
             .then((response_axios) => {
                 // console.log(`Status: ${response_axios.status}`)
                 // console.log("Body: ", response_axios.data)
@@ -203,7 +203,7 @@ ser.post('/action', (req, res) =>{
             }
         }
         // console.log(data_3)
-        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D3', data_3)
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D0', data_3)
             .then((response_axios) => {
                 // console.log(`Status: ${response_axios.status}`)
                 // console.log("Body: ", response_axios.data)
@@ -241,7 +241,7 @@ ser.post('/action', (req, res) =>{
             }
         }
         // console.log(data_4)
-        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D4', data_4)
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D2', data_4)
             .then((response_axios) => {
                 // console.log(`Status: ${response_axios.status}`)
                 // console.log("Body: ", response_axios.data)
@@ -279,7 +279,7 @@ ser.post('/action', (req, res) =>{
             }
         }
         // console.log(data_5)
-        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D5', data_5)
+        axios.put('http://188.166.206.43/eXBZDeQdaKiOd0uVDFjpfRiTB7R6ekJL/update/D14', data_5)
             .then((response_axios) => {
                 // console.log(`Status: ${response_axios.status}`)
                 // console.log("Body: ", response_axios.data)
